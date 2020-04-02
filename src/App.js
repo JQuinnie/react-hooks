@@ -1,24 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Link } from 'react-router-dom';
+
+import GithubCommit from './components/github-commit/github-commit.component';
+import HooksExamplesBasic from './components/hooks-examples/hooks-examples-basic.component'
+import PokemonFetch from './components/pokemon-fetch/pokemon-fetch.component';
+
 import './App.css';
+
+//TODO: fix unordered list text
+// project ideas could include the ones from codepen
+
+const Home = () => (
+  <div>
+    <h1>Please select a project below:</h1>
+    <ul>
+      <li>
+        <Link to="/github-commit">Github Commits</Link>
+      </li>
+      <li>
+        <Link to='/hooks-examples-basic'>React Hooks Examples - Basic</Link>
+      </li>
+      <li>
+      <Link to='/pokemon-fetch'>Pokemon Fetch</Link>
+    </li>
+    </ul>
+  </div>
+);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path="/" component={Home} />
+      <Route path="/github-commit" component={GithubCommit} />
+      <Route path="/hooks-examples" component={HooksExamplesBasic} />
+      <Route path='/pokemon-fetch' component={PokemonFetch} />
     </div>
   );
 }
