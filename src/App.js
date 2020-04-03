@@ -6,6 +6,7 @@ import HooksExamplesAdvance from './components/hooks-examples/hooks-examples-adv
 import GithubCommit from './components/github-commit/github-commit.component';
 import PokemonFetch from './components/pokemon-fetch/pokemon-fetch.component';
 import StateVsRef from './components/state-vs-ref/state-vs-ref.component';
+import ReducerForms from './components/reducer-form/reducer-form.component';
 
 import './App.css';
 
@@ -41,6 +42,11 @@ const Home = () => (
           State Versus Ref
         </Link>
       </li>
+      <li>
+        <Link className="link" to="/reducer-form">
+          Reducer Form
+        </Link>
+      </li>
     </ul>
   </div>
 );
@@ -54,6 +60,7 @@ function App() {
       <Route path="/github-commit" component={GithubCommit} />
       <Route path="/pokemon-fetch" component={PokemonFetch} />
       <Route path="/state-vs-ref" component={StateVsRef} />
+      <Route path="/reducer-form" component={ReducerForms} />
     </div>
   );
 }
