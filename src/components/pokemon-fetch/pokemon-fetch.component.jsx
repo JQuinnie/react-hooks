@@ -4,6 +4,7 @@ import Footer from '../footer.component';
 
 function Pokemon({ pokemonToGet }) {
   const [pokemon, setPokemon] = React.useState(null);
+
   React.useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonToGet}/`)
       .then(res => res.json())
@@ -11,7 +12,9 @@ function Pokemon({ pokemonToGet }) {
         setPokemon(res);
       });
   }, [pokemonToGet]); // get a new pokemon with the pokemonToGet prop changes
+
   const style = { textTransform: 'capitalize' };
+
   return (
     <div>
       {pokemon ? (
@@ -30,10 +33,12 @@ function Pokemon({ pokemonToGet }) {
 function PokemonFetch() {
   const [inputValue, setInputValue] = useState('');
   const [pokemonToGet, setPokemonToGet] = React.useState('gengar');
+
   function getPokemon() {
     setPokemonToGet(inputValue.trim().toLowerCase());
     setInputValue('');
   }
+
   return (
     <div>
       <h1>Gotta Fetch Em All:</h1>

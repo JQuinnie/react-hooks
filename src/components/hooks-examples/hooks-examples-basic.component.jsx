@@ -1,7 +1,15 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 
+import Footer from '../footer.component';
+
 const StateComponent = () => {
   const [isGreen, setIsGreen] = useState(true);
+  const [name, setName] = useState('');
+
+  const columnStyle = {
+    display: 'flex',
+    flexDirection: 'column'
+  };
 
   return (
     <div className="using-state">
@@ -9,6 +17,13 @@ const StateComponent = () => {
       <h3 onClick={() => setIsGreen(!isGreen)} style={{ color: isGreen ? 'limegreen' : 'orange' }}>
         Click here to toggle color!
       </h3>
+      <form style={{ ...columnStyle, width: '300px' }}>
+        <label style={columnStyle}>
+          <span>What is your name?</span>
+          <input onChange={e => setName(e.target.value)} value={name} type="text" />
+        </label>
+        <pre>{JSON.stringify({ name }, null, 2)}</pre>
+      </form>
     </div>
   );
 };
@@ -19,12 +34,13 @@ const EffectComponent = () => {
   useEffect(() => {
     const timer = setTimeout(setTime(new Date()), 1000);
     return () => clearTimeout(timer);
-  }, [time]);
+  }, []); // set array to [time] to see it work
 
   return (
     <div>
       <h1>useEffect Example:</h1>
       <h3>{time.toLocaleTimeString()}</h3>
+      <div style={{ color: 'red' }}>!disabled for the time being!</div>
     </div>
   );
 };
@@ -102,6 +118,7 @@ const HooksExamplesBasic = () => (
     <hr />
     <ContextComponent />
     <hr />
+    <Footer />
   </div>
 );
 

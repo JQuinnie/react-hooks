@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import Footer from '../footer.component';
+
 import './github-commit.styles.scss';
 
 const GithubCommit = () => {
@@ -44,6 +46,7 @@ const GithubCommit = () => {
           )}
         </div>
       ))}
+      <Footer />
     </div>
   );
 };
