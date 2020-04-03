@@ -39,7 +39,7 @@ Refs exist outside of the re-render cycle. Refs are variables you're setting to 
 
 Accepts a reducer function with the application initial state, returns the current application state, then dispatches a function. Reducers take arguments and reduce them down until they are more pallatable...function that you can run that takes in an old state, some sort of action, and returns to you a new state. It is almost identical to `useState`, except `useReducer` lets you **define exactly how to update it's state value** by passing it a function.
 
-Instead of having a bunch of functions to update various properties, we can have one reducer that handles all the updates based on an action type.
+Instead of having a bunch of functions to update various properties, we can have one reducer that handles all the updates based on an action type. When we call `dispatch`, we pass in an object that tells us what happened, and then our reducer takes that information and processes it to create a new state.
 
 ### Note
 

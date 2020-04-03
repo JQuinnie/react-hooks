@@ -55,7 +55,7 @@ const ReducerComponent = () => {
 
   return (
     <div>
-      <h1>useReducer Example</h1>
+      <h1>useReducer Example:</h1>
       <h2 style={{ color: `rgb(${r}, ${g}, ${b})` }}>See this Header change colors!</h2>
       <div>
         <span>r:</span>
