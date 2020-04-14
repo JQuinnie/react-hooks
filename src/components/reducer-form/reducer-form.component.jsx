@@ -184,7 +184,7 @@ function ReducerForm() {
   };
   return (
     <div>
-      <h1>Fill A Reducer Form:</h1>
+      <h1 className="text-4xl text-center">Fill A Reducer Form:</h1>
       <h3 style={{ color: 'red' }}>⚠️ Can edit the form after submit ⚠️</h3>
       <form style={{ ...columnStyle, width: '300px' }} onSubmit={handleSubmit}>
         <label style={columnStyle}>

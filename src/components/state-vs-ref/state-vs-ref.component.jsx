@@ -13,6 +13,7 @@ const StateVsRef = () => {
 
   return (
     <div>
+      <h1 className="text-4xl text-center">State vs. Ref</h1>
       <p>State Counter: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment State Count</button>
       <hr />

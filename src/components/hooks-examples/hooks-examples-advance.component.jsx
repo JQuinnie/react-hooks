@@ -15,7 +15,7 @@ const RefComponent = () => {
 
   return (
     <div>
-      <h1>useRef Example</h1>
+      <h1 className="text-4xl text-center">useRef Example</h1>
       <button onClick={incrementAndDelayLogging}>delay logging</button>
       <h4>state: {stateNumber}</h4>
       <h4>ref: {numRef.current}</h4>
@@ -55,7 +55,7 @@ const ReducerComponent = () => {
 
   return (
     <div>
-      <h1>useReducer Example:</h1>
+      <h1 className="text-4xl text-center">useReducer Example:</h1>
       <h2 style={{ color: `rgb(${r}, ${g}, ${b})` }}>See this Header change colors!</h2>
       <div>
         <span>r:</span>

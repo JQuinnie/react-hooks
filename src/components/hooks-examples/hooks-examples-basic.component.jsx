@@ -13,7 +13,7 @@ const StateComponent = () => {
 
   return (
     <div className="using-state">
-      <h1>useState Example:</h1>
+      <h1 className="text-4xl text-center">useState Example:</h1>
       <h3 onClick={() => setIsGreen(!isGreen)} style={{ color: isGreen ? 'limegreen' : 'orange' }}>
         Click here to toggle color!
       </h3>
@@ -38,7 +38,7 @@ const EffectComponent = () => {
 
   return (
     <div>
-      <h1>useEffect Example:</h1>
+      <h1 className="text-4xl text-center">useEffect Example:</h1>
       <h3>{time.toLocaleTimeString()}</h3>
       <div style={{ color: 'red' }}>!disabled for the time being!</div>
     </div>

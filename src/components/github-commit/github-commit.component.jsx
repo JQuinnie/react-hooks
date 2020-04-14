@@ -30,7 +30,7 @@ const GithubCommit = () => {
 
   return (
     <div>
-      <h1>API calls with React Hooks</h1>
+      <h1 className="text-4xl text-center">API calls with React Hooks</h1>
       {isLoading && <p>Wait I'm loading comments for you</p>}
       {commitHistory.length !== 0 && <button onClick={loadMoreCommit}>Load More Commits</button>}
       {commitHistory.map((c, idx) => (

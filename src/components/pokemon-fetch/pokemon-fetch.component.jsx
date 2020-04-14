@@ -41,7 +41,7 @@ function PokemonFetch() {
 
   return (
     <div>
-      <h1>Gotta Fetch Em All:</h1>
+      <h1 className="text-4xl text-center">Gotta Fetch Em All:</h1>
       <input onChange={e => setInputValue(e.target.value)} value={inputValue} type="text" />
       <button onClick={getPokemon}>Get Pokemon</button>
       <Pokemon pokemonToGet={pokemonToGet} />
