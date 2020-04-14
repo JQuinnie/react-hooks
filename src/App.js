@@ -7,6 +7,7 @@ import GithubCommit from './components/github-commit/github-commit.component';
 import PokemonFetch from './components/pokemon-fetch/pokemon-fetch.component';
 import StateVsRef from './components/state-vs-ref/state-vs-ref.component';
 import ReducerForms from './components/reducer-form/reducer-form.component';
+import LearnAboutCountries from './components/learn-about-countries/learn-about-countries.component';
 
 import './App.css';
 
@@ -15,8 +16,8 @@ import './App.css';
 
 const Home = () => (
   <div className="home">
-    <h1>Please select a project below:</h1>
-    <ul>
+    <h1 className="text-4xl text-center">Please select a project below:</h1>
+    <ul className="list-disc">
       <li>
         <Link className="link" to="/hooks-examples-basic">
           React Hooks Examples - Basic
@@ -47,6 +48,11 @@ const Home = () => (
           Reducer Form
         </Link>
       </li>
+      <li>
+      <Link className="link" to="/learn-about-countries">
+        Learn About Countries
+      </Link>
+    </li>
     </ul>
   </div>
 );
@@ -61,6 +67,7 @@ function App() {
       <Route path="/pokemon-fetch" component={PokemonFetch} />
       <Route path="/state-vs-ref" component={StateVsRef} />
       <Route path="/reducer-form" component={ReducerForms} />
+      <Route path="/learn-about-countries" component={LearnAboutCountries} />
     </div>
   );
 }
