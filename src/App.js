@@ -10,6 +10,7 @@ import PokemonFetch from './components/pokemon-fetch/pokemon-fetch.component';
 import StateVsRef from './components/state-vs-ref/state-vs-ref.component';
 import ReducerForms from './components/reducer-form/reducer-form.component';
 import LearnAboutCountries from './components/learn-about-countries/learn-about-countries.component';
+import Movies from './views/movies';
 import ErrorPage from './components/error-page.component';
 
 import './App.css';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/state-vs-ref" component={StateVsRef} />
         <Route path="/reducer-form" component={ReducerForms} />
         <Route path="/learn-about-countries" component={LearnAboutCountries} />
+        <Route path="/movies-context" component={Movies} />
         <Route component={ErrorPage} />
       </Switch>
     </div>

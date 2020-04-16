@@ -59,6 +59,11 @@ const Home = () => (
           Learn About Countries
         </Link>
       </li>
+      <li>
+        <Link className="link" to="/movies-context">
+          Movies via Context API
+        </Link>
+      </li>
     </ul>
   </div>
 );
