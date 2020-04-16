@@ -1,6 +1,7 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
+import Home from './views/home';
 import HooksExamplesBasic from './components/hooks-examples/hooks-examples-basic.component';
 import HooksExamplesAdvance from './components/hooks-examples/hooks-examples-advance.component';
 import HooksExamplesRouter from './components/hooks-examples/hooks-examples-router.component';
@@ -13,69 +14,7 @@ import ErrorPage from './components/error-page.component';
 
 import './App.css';
 
-//TODO: fix unordered list text
-// project ideas could include the ones from codepen
-
-const Home = () => (
-  <div className="home">
-    <h1 className="text-4xl text-center">Please select a project below:</h1>
-    <ul className="list-disc">
-      <li>
-        <Link className="link" to="/hooks-examples-basic">
-          React Hooks Examples - Basic
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/hooks-examples-advance">
-          React Hooks Examples - Advance
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/hooks-examples-router">
-          React Hooks Examples - Router
-        </Link>
-      </li>
-      <li>
-        <Link
-          className="link"
-          to={{
-            pathname: '/hooks-examples-router',
-            state: {
-              customMessageKey: 'passing object into route with custom message',
-            },
-          }}
-        >
-          React Hooks Examples - Router with State Passing
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/github-commit">
-          Github Commits
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/pokemon-fetch">
-          Pokemon Fetch
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/state-vs-ref">
-          State Versus Ref
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/reducer-form">
-          Reducer Form
-        </Link>
-      </li>
-      <li>
-        <Link className="link" to="/learn-about-countries">
-          Learn About Countries
-        </Link>
-      </li>
-    </ul>
-  </div>
-);
+// TODO: project ideas could include the ones from codepen
 
 function App() {
   return (
